@@ -20,8 +20,9 @@ app.get("/webhook",(req,res)=>{
 
 
     if(mode && token){
-
+        console.log("mode: ",mode)
         if(mode==="subscribe" && token===mytoken){
+            console.log("token: ",token)
             res.status(200).send(challange);
         }else{
             res.status(403);
